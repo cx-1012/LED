@@ -20,9 +20,9 @@ void setup() {
 void loop() {
   buttonState=digitalRead(pushButton);
   Serial.print("currentcolor: ");
-  Serial.println(currentcolor);
+  Serial.println(buttonState);
   if(buttonState == HIGH && !ButtonPressed) {
-  ledcolor = !ledColorOrder;
+  ledColorOrder = !ledColorOrder;
   ButtonPressed = true;
   } 
   if(buttonState == LOW && ButtonPressed){
